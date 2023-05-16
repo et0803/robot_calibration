@@ -114,8 +114,8 @@ bool OptimizationParams::LoadFromROS(rclcpp::Node::SharedPtr node,
       std::shared_ptr<Chain3dToCamera2dParams> params = std::make_shared<Chain3dToCamera2dParams>();
       params->name = name;
       params->type = type;
-      params->model_3d = node->declare_parameter<std::string>(prefix + ".model_2d", std::string());
-      params->model_2d = node->declare_parameter<std::string>(prefix + ".model_3d", std::string());
+      params->model_2d = node->declare_parameter<std::string>(prefix + ".model_2d", std::string());
+      params->model_3d = node->declare_parameter<std::string>(prefix + ".model_3d", std::string());
       params->scale = node->declare_parameter<double>(prefix + ".scale", 1.0);
       error_blocks.push_back(params);
     }
